@@ -19,10 +19,12 @@ function Score(){
     const listScores = dataLearner.map(function(student){
         // refer to dataLearner array collection & dot notation call for respective values
         <li key={student.name}>
-            <p>{student.scores}</p>
+            <p>{student.scores.date}</p>
+            <p>{student.scores.score}</p>
         </li>
     });
-    return(<ul>{listScores}</ul>);
+    return(<ul>{listScores}</ul>);  // unsure if this way renders score's "date" & "score" properties already or below needed
+    // return(<Score />);           // to render Score component
 }
 
 export default Score;

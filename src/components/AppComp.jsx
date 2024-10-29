@@ -37,7 +37,7 @@ import Learner from "./Learner.jsx";
 function AppComp(){
     
     return(
-        // rendering <Learner> component (contains name & bio) within <AppComp> component 
+        // rendering <Learner> component (contains name, bio & <Score> component) within <AppComp> component 
         <>
             <Learner />
 
