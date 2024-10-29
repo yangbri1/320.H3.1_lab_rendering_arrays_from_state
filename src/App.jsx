@@ -12,11 +12,12 @@ import './App.css'
 import { dataLearner } from '../src/utilities/data.mjs';
 
 import AppComp from './components/AppComp.jsx';
-
+import Learner from './components/Learner.jsx';
+import Score from './components/Score.jsx';
 // root App component
 function App() {
 
-  
+
   // const [count, setCount] = useState(0)
   // Unsure: I believe this counts as wrapping the dataLearner array with an object container & not destructuring?
   const [learners, setLearners] = useState(dataLearner)
@@ -26,12 +27,9 @@ function App() {
     <>
       <h2>Learners Assemble!</h2>
       <AppComp />
-
-      <ul>
-        <li key={learners.name}>
-          {learners.name}
-        </li>
-      </ul>
+      <Learner />
+      <Score />
+      
     
       
     </>
