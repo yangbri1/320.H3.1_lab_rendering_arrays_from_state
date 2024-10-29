@@ -13,7 +13,7 @@ import { dataLearner } from "../utilities/data.mjs";
 //     ))
 // }
 
-function Score(){
+function Score({ dataLearner }){
     // implement JS array .map() method on dataLearner old array & search for learner scores' date & score
     // here we using nameless function declaration 
     const listScores = dataLearner.map(function(student){
