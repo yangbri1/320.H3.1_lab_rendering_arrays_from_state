@@ -9,32 +9,26 @@ import './App.css'
 // import given learner data -- destructure "dataLearner" directly from props (so no need to constantly props.dataLearner later)
 import { dataLearner } from '../src/utilities/data.mjs';
 
+import AppComp from './components/AppComp.jsx';
+
+// root App component
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
+  // Unsure: I believe this counts as wrapping the dataLearner array with an object container & not destructuring?
+  const [learners, setLearners] = useState({dataLearner})
 
   return (
-    // <>
-    //   <div>
-    //     <a href="https://vite.dev" target="_blank">
-    //       <img src={viteLogo} className="logo" alt="Vite logo" />
-    //     </a>
-    //     <a href="https://react.dev" target="_blank">
-    //       <img src={reactLogo} className="logo react" alt="React logo" />
-    //     </a>
-    //   </div>
-    //   <h1>Vite + React</h1>
-    //   <div className="card">
-    //     <button onClick={() => setCount((count) => count + 1)}>
-    //       count is {count}
-    //     </button>
-    //     <p>
-    //       Edit <code>src/App.jsx</code> and save to test HMR
-    //     </p>
-    //   </div>
-    //   <p className="read-the-docs">
-    //     Click on the Vite and React logos to learn more
-    //   </p>
-    // </>
+    // renders <AppComp> component which renders <Learner> and <Score> components within
+    <>
+    <h2>Learners assemble</h2>
+    <ul>
+      <li key={learners.name}>
+
+      </li>
+    </ul>
+    
+      <AppComp />
+    </>
   )
 }
 
